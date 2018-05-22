@@ -16,7 +16,7 @@ Durante queste lezioni, verranno forniti agli allievi le basi per lo sviluppo di
 
 La partenza del corso è prevista Martedì 29 Maggio, per terminare il 13 Settembre 2018. Lezioni si svolgono tutti martedì e giovedì dalle 18:00 alle 20:00 (prevista una pausa corso dal 13 al 26 Agosto 2018).
 
-Nel [syllabus](./syllabus.docx) sono riportate altre informazioni riguardo alle lezioni.
+Nel [syllabus](./syllabus.docx?raw=true) sono riportate altre informazioni riguardo alle lezioni.
 
 ## Materiali
 
