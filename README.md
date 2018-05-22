@@ -27,4 +27,4 @@ Nel [syllabus](./syllabus.docx?raw=true) sono riportate altre informazioni rigua
 
 - Gargaro Andrea
 - [Labarile Marco](https://github.com/labarilem)
-- Masci Giorgio
+- [Masci Giorgio](https://github.com/gmasci-ca)
