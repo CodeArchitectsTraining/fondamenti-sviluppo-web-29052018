@@ -26,5 +26,5 @@ Nel [syllabus](./syllabus.docx?raw=true) sono riportate altre informazioni rigua
 ## Docenti
 
 - Gargaro Andrea
-- [Labarile Marco](https://github.com/labarilem)
+- [Labarile Marco](https://marcolabarile.me/)
 - [Masci Giorgio](https://github.com/gmasci-ca)
