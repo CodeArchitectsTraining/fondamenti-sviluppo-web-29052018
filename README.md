@@ -28,3 +28,4 @@ Nel [syllabus](./syllabus.docx?raw=true) sono riportate altre informazioni rigua
 - Gargaro Andrea
 - [Labarile Marco](https://marcolabarile.me/)
 - [Masci Giorgio](https://github.com/gmasci-ca)
+- Fraccalvieri Andrea
