@@ -1,6 +1,7 @@
 {
   "extends": "tslint-config-airbnb",
   "rules": {
+    "quotemark": false,
     "max-line-length": [
       true,
       150
@@ -11,7 +12,7 @@
     ],
     "ter-indent": [
       true,
-      4,
+      2,
       {
         "SwitchCase": 1
       }
@@ -20,7 +21,7 @@
       false
     ],
     "ter-arrow-parens": [
-      true,
+      false,
       "always"
     ],
     "variable-name": [
@@ -31,7 +32,7 @@
     ],
     "newline-before-return": true,
     "ter-newline-after-var": [
-      true,
+      false,
       "always"
     ],
     "no-unused-variable": true,

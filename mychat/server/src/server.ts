@@ -1,7 +1,6 @@
 import * as express from 'express';
 import Routes from './router/routes';
 import Middleware from './config/middleware';
-import Cron from './config/cron';
 
 /**
  * @class Server
@@ -12,7 +11,6 @@ export class Server {
 
   constructor() {
     this.app = express();
-    Cron.init();
     Middleware.init(this);
     Routes.init(this);
   }

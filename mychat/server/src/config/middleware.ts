@@ -3,7 +3,7 @@ import * as compression from 'compression';
 import * as cookieParser from 'cookie-parser';
 import * as cors from 'cors';
 import * as helmet from 'helmet';
-import { IServer } from '../interfaces/ServerInterface';
+import { IServer } from '../interfaces/server.interface';
 
 export default class Middleware {
   static init(server: IServer): void {
@@ -24,9 +24,11 @@ export default class Middleware {
         'Origin, X-Requested-With,' +
         ' Content-Type, Accept,' +
         ' Authorization,' +
-        ' Access-Control-Allow-Credentials'
+        ' Access-Control-Allow-Credentials,' +
+        ' Access-Control-Allow-Origin'
       );
       res.header('Access-Control-Allow-Credentials', 'true');
+      res.header('Access-Control-Allow-Origin', '*');
       next();
     });
   }

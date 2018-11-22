@@ -1,6 +1,6 @@
 import * as express from 'express';
-import UserRouter from './UserRouter';
-import { IServer } from '../interfaces/ServerInterface';
+import UsersRouter from './users';
+import { IServer } from '../interfaces/server.interface';
 
 export default class Routes {
   /**
@@ -12,6 +12,6 @@ export default class Routes {
 
     server.app.use('/', router);
     // users
-    server.app.use('/users', new UserRouter().router);
+    server.app.use('/users', new UsersRouter().router);
   }
 }

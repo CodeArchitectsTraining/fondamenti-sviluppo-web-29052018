@@ -1,18 +1,20 @@
-# MyChat
+# MyChat Server
 
-My chat application.
+Server of the MyChat service.
 
 ## Setup
 
 Run:
 
-```
+```bash
 npm i
 ```
 
 ## Running the API
+
 ### Development
-To start the application in development mode, run:
+
+To start the server in development mode, run:
 
 ```bash
 npm run server
