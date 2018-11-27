@@ -1,6 +1,6 @@
 import { User } from "../models/user";
 
-export class UserRepository {
+export class UsersRepository {
 
   private users: User[];
 
@@ -10,6 +10,10 @@ export class UserRepository {
 
   public async find(name: string): Promise<User> {
     return await Promise.resolve(this.users.find(u => u.name === name));
+  }
+
+  public async exists(name: string, secret: string): Promise<boolean> {
+    return await Promise.resolve(this.users.some(u => u.name === name && u.secret === secret))
   }
 
   public async create(user: User): Promise<void> {
@@ -24,4 +28,4 @@ export class UserRepository {
   }
 }
 
-export const userRepositoryInstance: UserRepository = new UserRepository();
+export const usersRepositoryInstance: UsersRepository = new UsersRepository();

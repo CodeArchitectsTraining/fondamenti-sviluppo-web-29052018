@@ -14,13 +14,7 @@ export class MessagesRepository {
   }
 
   public async create(message: Message): Promise<void> {
-    const existingUser: User = await this.find(user.name);
-    if (existingUser !== undefined) {
-      throw new Error("An user with this name already exists");
-    } else {
-      this.users.push(user);
-    }
-
+    this.messages.push(message);
     await Promise.resolve();
   }
 }

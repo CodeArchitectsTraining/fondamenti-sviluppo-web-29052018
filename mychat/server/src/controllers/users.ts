@@ -1,11 +1,11 @@
 import { User } from '../models/user';
 import * as express from 'express';
-import { UserRepository, userRepositoryInstance } from '../storage/users-repository';
+import { UsersRepository, usersRepositoryInstance } from '../storage/users-repository';
 import { ApiResponse } from '../models/api-response';
 
 class UsersController {
 
-  constructor(private usersRepository: UserRepository) {
+  constructor(private usersRepository: UsersRepository) {
   }
 
   public getUser = async (req: express.Request, res: express.Response, next: express.NextFunction): Promise<void> => {
@@ -36,11 +36,12 @@ class UsersController {
   }
 
   public createUser = async (req: express.Request, res: express.Response, next: express.NextFunction): Promise<void> => {
-    const userToCreate: any = req.body;
+    const userToCreate: User = req.body;
 
     if (userToCreate !== null && userToCreate !== undefined && typeof userToCreate === 'object' &&
       typeof userToCreate.name === 'string' && userToCreate.name !== '' &&
       typeof userToCreate.age === 'number' && userToCreate.age > 0 &&
+      typeof userToCreate.profileImageUrl === 'string' && userToCreate.profileImageUrl !== '' &&
       typeof userToCreate.secret === 'string' && userToCreate.secret !== '') {
       // Valid user supplied
       try {
@@ -66,4 +67,4 @@ class UsersController {
   }
 }
 
-export default new UsersController(userRepositoryInstance);
+export default new UsersController(usersRepositoryInstance);
