@@ -1,7 +1,7 @@
 import UsersController from '../controllers/users';
 import { Router } from 'express';
 /**
- * @class UserRouter
+ * @class UsersRouter
  */
 export default class UsersRouter {
   public router: Router;

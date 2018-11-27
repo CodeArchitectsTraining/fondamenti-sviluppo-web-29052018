@@ -1,5 +1,6 @@
 import * as express from 'express';
 import UsersRouter from './users';
+import MessagesRouter from './messages';
 import { IServer } from '../interfaces/server.interface';
 
 export default class Routes {
@@ -13,5 +14,7 @@ export default class Routes {
     server.app.use('/', router);
     // users
     server.app.use('/users', new UsersRouter().router);
+    // messages
+    server.app.use('/messages', new MessagesRouter().router);
   }
 }
