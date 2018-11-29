@@ -13,7 +13,7 @@ export class UsersRepository {
   }
 
   public async exists(name: string, secret: string): Promise<boolean> {
-    return await Promise.resolve(this.users.some(u => u.name === name && u.secret === secret))
+    return await Promise.resolve(this.users.some(u => u.name === name && u.secret === secret));
   }
 
   public async create(user: User): Promise<void> {

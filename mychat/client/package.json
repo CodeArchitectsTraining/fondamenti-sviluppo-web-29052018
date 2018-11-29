@@ -1,0 +1,13 @@
+{
+  "name": "mychat",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "keywords": [],
+  "description": "MyChat Application",
+  "author": "Code Architects",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  }
+}

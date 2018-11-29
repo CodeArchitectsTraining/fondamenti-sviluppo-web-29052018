@@ -10,10 +10,10 @@ class UsersController {
 
   public getUser = async (req: express.Request, res: express.Response, next: express.NextFunction): Promise<void> => {
     try {
-      const user: User = await this.usersRepository.find(req.query.name);
-
-      if (user !== null && user !== undefined) {
+      const exists: boolean = await this.usersRepository.exists(req.query.name, req.query.secret);
+      if (exists) {
         // Found user
+        const user: User = await this.usersRepository.find(req.query.name);
         const apiResponse: ApiResponse<User> = new ApiResponse<User>();
         apiResponse.data = user;
         apiResponse.error = null;
