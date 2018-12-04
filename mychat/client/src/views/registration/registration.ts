@@ -2,6 +2,11 @@
  * Registers new user
  */
 function onRegister() {
-  // Funzione da chiamare nel momento in cui si clicca sul pulsante di registrazione
-  // Deve eseguire la registrazione e tornare indietro di una pagina (login)
+  const username = (document.getElementById('username') as HTMLInputElement).value;
+  const secret = (document.getElementById('secret') as HTMLInputElement).value;
+  const age = Number((document.getElementById('age') as HTMLInputElement).value);
+  const profileImageUrl = (document.getElementById('profileImageUrl') as HTMLInputElement).value;
+  if (register(username, secret, age, profileImageUrl)) {
+    back();
+  }
 }

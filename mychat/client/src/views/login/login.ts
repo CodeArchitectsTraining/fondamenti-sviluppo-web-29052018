@@ -2,9 +2,9 @@
  * Performs login
  */
 function onLogin() {
-  // Funzione da chiamare nel momento in cui si clicca sul pulsante di login
-  // Deve eseguire il login e reindirizzare alla pagina home
-  if (true) {
+  const username = (document.getElementById('username') as HTMLInputElement).value;
+  const secret = (document.getElementById('secret') as HTMLInputElement).value;
+  if (login(username, secret)) {
     window.location.href = '../home/home.html';
   }
 }
@@ -13,6 +13,5 @@ function onLogin() {
  * Go to registration page
  */
 function onRegistration() {
-  // Funzione da chiamare nel momento in cui si clicca sul pulsante di registrazione
-  // Deve reindirizzare alla pagina registrazione
+  window.location.href = '../registration/registration.html';
 }

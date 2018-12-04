@@ -1,29 +1,46 @@
 let loggedUser = getLoggedUser();
-
 /**
  * Performs logout
  */
 function onLogout() {
-  // Funzione da chiamare nel momento in cui si clicca sul pulsante di logout
-  // Deve eseguire il logout e reindirizzare alla pagina di login
+  logout();
+  loggedUser = undefined;
+  window.location.href = '../login/login.html';
 }
 
 function send() {
-  // Funzione da chiamare nel momento in cui si clicca sul pulsante "Invia messaggio"
-  // Deve inviare il messaggio scritto nella textarea e svuotare il contenuto
-  // della textarea stessa. Infine deve rieseguire il setup dei messaggi
+  const message = (document.getElementById('text') as HTMLTextAreaElement);
+  const success = sendMessage(loggedUser.name, loggedUser.secret, message.value);
+  if (success) {
+    message.value = '';
+  }
+  setupMessages();
 }
 
 function setupMessages() {
-  // Recuperare i messaggi dal server
+  const messages = getMessages();
   const messagesElement = document.getElementById('messages');
   messagesElement.innerHTML = '';
-// -----------------------------------------------------------
-  // Ciclare tutti i messaggi e creare per ognuno di essi un elemento HTML
-  // contenente il messaggio, il nome dell'utente e la foto del profilo.
-  // Tali elementi HTML andranno "appesi" all'elemento con id "messages"
+  messages.forEach(m => {
+    const messageElement = document.createElement('div');
+    messageElement.className = 'message';
+    if (m.userName === loggedUser.name) {
+      messageElement.className += ' my-message';
+    }
+    const textElement = document.createElement('span');
+    textElement.innerText = m.text;
+    const profileElement = document.createElement('img');
+    profileElement.src = m.profileImageUrl;
+    messageElement.appendChild(profileElement);
+    messageElement.appendChild(textElement);
+    messagesElement.appendChild(messageElement);
+  });
 }
 
 setTimeout(() => {
   setupMessages();
 }, 1);
+
+setInterval(() => {
+  setupMessages();
+}, 2000)
