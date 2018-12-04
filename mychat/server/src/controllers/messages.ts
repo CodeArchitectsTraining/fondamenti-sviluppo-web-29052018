@@ -41,10 +41,12 @@ class MessagesController {
         const authenticated: boolean = await this.usersRepository.exists(messageRequest.userName, messageRequest.userSecret);
         if (authenticated) {
           // Valid user/secret combination
+          const user: User = await this.usersRepository.find(messageRequest.userName);
           const messageToCreate: Message = new Message();
           messageToCreate.date = new Date();
           messageToCreate.text = messageRequest.text;
           messageToCreate.userName = messageRequest.userName;
+          messageToCreate.profileImageUrl = user.profileImageUrl;
           await this.messagesRepository.create(messageToCreate);
           const apiResponse: ApiResponse<boolean> = new ApiResponse<boolean>();
           apiResponse.data = true;

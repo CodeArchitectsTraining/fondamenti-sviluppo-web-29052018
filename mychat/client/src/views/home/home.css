@@ -1,0 +1,83 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* rientranza di 20px */
+  /* immagine di sfondo:  https://avante.biz/wp-content/uploads/Whatsapp-wallpaper-ios-7/Whatsapp-wallpaper-ios-790.jpg*/
+}
+
+#messages {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* distanza dal basso di 46px */
+  /* rientranza verticale di 30px */
+  /* rientranza da destra di 90px */
+  /* rientranza da sinistra di 10px */
+  /* contenuto verticale scrollabile */
+}
+
+.message {
+  /* colore di sfondo dodgerblue */
+  /* arrotondamento degli angoli di 30px */
+  /* posizionamento relativo */
+  /* margine verticale di 15px */
+  /* rientranza verticale di 5px */
+  /* rientranza orizzontale di 45px */
+  /* altezza minima di 30px */
+}
+
+.message:not(.my-message) {
+  margin-right: 20px;
+}
+
+.my-message {
+  /* colore di sfondo slategray */
+  /* margine sinistro di 40px */
+}
+
+.message img {
+  /* altezza e larghezza pari a 30px */
+  /* arrotondamento degli angoli di 50px */
+  position: absolute;
+  /* distanza dall'alto di 5px */
+  /* distanza da sinistra di 10px */
+}
+
+.message span {
+  /* colore del testo bianco */
+  vertical-align: middle;
+}
+
+#chat-section {
+  position: absolute;
+  /* posizionato in basso da sinistra verso destra */
+}
+
+textarea {
+  vertical-align: middle;
+  width: 80%;
+  margin: 10px;
+}
+
+/* Il bottone situato accanto alla textarea deve
+avere sfondo limegreen, arrotondamento degli angoli di 50px,
+colore del testo bianco, altezza di 30px e larghezza di 60px.
+Il bottone non deve avere bordi e deve essere "allineato verticalmente"
+al centro*/
+
+#logout {
+  position: fixed;
+  right: 5px;
+  top: 3px;
+  border-radius: 50%;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+}

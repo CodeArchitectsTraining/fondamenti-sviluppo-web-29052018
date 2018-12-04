@@ -3,6 +3,7 @@
  */
 interface IMessage {
   userName: string;
+  profileImageUrl: string;
   text: string;
   date: Date;
 }
